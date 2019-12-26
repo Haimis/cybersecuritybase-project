@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>noteApp</title>
+    </head>
+
+    <body>
+        <h1>Hi <span th:text="${name}"></span> !</h1>
+        <p>Your notes: </p>
+        <ul>
+            <li th:each="item : ${notes}">
+                <span th:text="${item}"></span>
+            </li>
+        </ul>
+        <form th:action="@{/notes}" method="POST">
+            <input type="text" name="note"/>
+            <input type="hidden" name="user"/> 
+            <input type="submit"/>
+        </form>
+        <a href="/logout" th:href="@{/logout}">Log Out</a>
+        
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>noteApp</title>
+    </head>
+    <body>
+
+        <h1>Sign in</h1>
+        <p>Sign in to your account</p>
+        <form action="#" th:action="@{/signin}" method="POST">
+            <p><label for="name">Name</label>: <input type="text" name="name" id="name"/></p>
+            <p><label for="password">Password</label>: <input type="password" name="password" id="password"/></p>
+            <p><input type="submit" value="Submit" /></p>
+            <p>If you don't have a account, register here </p>
+            <a href="/register">Register</a>
+        </form>
+        <p></p>
+    </body>
+</html>
